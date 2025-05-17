@@ -162,3 +162,172 @@ function CheckQuest()
         end
     end
 end
+function CheckQuest()
+    local Level = game.Players.LocalPlayer.Data.Level.Value
+    local MyLevel = Level
+
+    if World1 then
+        -- [CÓDIGO DO PRIMEIRO MUNDO AQUI - você já tem completo]
+
+    elseif World2 then
+        if MyLevel == 700 or MyLevel <= 725 then
+            Mon = "Raider [Lv. 700]"
+            QuestName = "Area1Quest"
+            QuestLevel = 1
+            NameQuest = "Raider"
+            CFrameMon = CFrame.new(2334, 25, 902)
+            CFrameQuest = CFrame.new(2286, 15, 906)
+        elseif MyLevel <= 775 then
+            Mon = "Mercenary [Lv. 725]"
+            QuestName = "Area1Quest"
+            QuestLevel = 2
+            NameQuest = "Mercenary"
+            CFrameMon = CFrame.new(980, 120, 1290)
+            CFrameQuest = CFrame.new(2286, 15, 906)
+        elseif MyLevel <= 875 then
+            Mon = "Swan Pirate [Lv. 775]"
+            QuestName = "Area2Quest"
+            QuestLevel = 1
+            NameQuest = "Swan Pirate"
+            CFrameMon = CFrame.new(878, 122, 1236)
+            CFrameQuest = CFrame.new(635, 72, 917)
+        elseif MyLevel <= 925 then
+            Mon = "Factory Staff [Lv. 800]"
+            QuestName = "Area2Quest"
+            QuestLevel = 2
+            NameQuest = "Factory Staff"
+            CFrameMon = CFrame.new(295, 73, 1483)
+            CFrameQuest = CFrame.new(635, 72, 917)
+        elseif MyLevel <= 975 then
+            Mon = "Marine Lieutenant [Lv. 875]"
+            QuestName = "MarineQuest3"
+            QuestLevel = 1
+            NameQuest = "Marine Lieutenant"
+            CFrameMon = CFrame.new(-2803, 73, -3036)
+            CFrameQuest = CFrame.new(-2442, 73, -3216)
+        elseif MyLevel <= 1025 then
+            Mon = "Marine Captain [Lv. 900]"
+            QuestName = "MarineQuest3"
+            QuestLevel = 2
+            NameQuest = "Marine Captain"
+            CFrameMon = CFrame.new(-1869, 73, -3143)
+            CFrameQuest = CFrame.new(-2442, 73, -3216)
+        elseif MyLevel <= 1050 then
+            Mon = "Zombie [Lv. 950]"
+            QuestName = "ZombieQuest"
+            QuestLevel = 1
+            NameQuest = "Zombie"
+            CFrameMon = CFrame.new(-5736, 126, -728)
+            CFrameQuest = CFrame.new(-5494, 49, -795)
+        elseif MyLevel <= 1100 then
+            Mon = "Vampire [Lv. 975]"
+            QuestName = "ZombieQuest"
+            QuestLevel = 2
+            NameQuest = "Vampire"
+            CFrameMon = CFrame.new(-6034, 6, -1303)
+            CFrameQuest = CFrame.new(-5494, 49, -795)
+        elseif MyLevel <= 1150 then
+            Mon = "Snow Trooper [Lv. 1000]"
+            QuestName = "SnowMountainQuest"
+            QuestLevel = 1
+            NameQuest = "Snow Trooper"
+            CFrameMon = CFrame.new(608, 402, -5372)
+            CFrameQuest = CFrame.new(606, 402, -5372)
+        elseif MyLevel <= 1200 then
+            Mon = "Winter Warrior [Lv. 1050]"
+            QuestName = "SnowMountainQuest"
+            QuestLevel = 2
+            NameQuest = "Winter Warrior"
+            CFrameMon = CFrame.new(1155, 430, -5188)
+            CFrameQuest = CFrame.new(606, 402, -5372)
+        elseif MyLevel <= 1250 then
+            Mon = "Lab Subordinate [Lv. 1100]"
+            QuestName = "IceSideQuest"
+            QuestLevel = 1
+            NameQuest = "Lab Subordinate"
+            CFrameMon = CFrame.new(-5782, 45, -4480)
+            CFrameQuest = CFrame.new(-6060, 16, -4906)
+        elseif MyLevel <= 1300 then
+            Mon = "Horned Warrior [Lv. 1125]"
+            QuestName = "IceSideQuest"
+            QuestLevel = 2
+            NameQuest = "Horned Warrior"
+            CFrameMon = CFrame.new(-6292, 15, -5201)
+            CFrameQuest = CFrame.new(-6060, 16, -4906)
+        elseif MyLevel <= 1325 then
+            Mon = "Magma Ninja [Lv. 1175]"
+            QuestName = "FireSideQuest"
+            QuestLevel = 1
+            NameQuest = "Magma Ninja"
+            CFrameMon = CFrame.new(-5428, 78, -5958)
+            CFrameQuest = CFrame.new(-5449, 16, -5296)
+        elseif MyLevel <= 1350 then
+            Mon = "Lava Pirate [Lv. 1200]"
+            QuestName = "FireSideQuest"
+            QuestLevel = 2
+            NameQuest = "Lava Pirate"
+            CFrameMon = CFrame.new(-5799, 89, -6200)
+            CFrameQuest = CFrame.new(-5449, 16, -5296)
+        elseif MyLevel <= 1425 then
+            Mon = "Ship Deckhand [Lv. 1250]"
+            QuestName = "ShipQuest1"
+            QuestLevel = 1
+            NameQuest = "Ship Deckhand"
+            CFrameMon = CFrame.new(1198, 126, 33031)
+            CFrameQuest = CFrame.new(1038, 125, 32913)
+        elseif MyLevel <= 1450 then
+            Mon = "Ship Engineer [Lv. 1275]"
+            QuestName = "ShipQuest1"
+            QuestLevel = 2
+            NameQuest = "Ship Engineer"
+            CFrameMon = CFrame.new(920, 126, 32800)
+            CFrameQuest = CFrame.new(1038, 125, 32913)
+        elseif MyLevel <= 1475 then
+            Mon = "Ship Steward [Lv. 1300]"
+            QuestName = "ShipQuest2"
+            QuestLevel = 1
+            NameQuest = "Ship Steward"
+            CFrameMon = CFrame.new(915, 126, 33075)
+            CFrameQuest = CFrame.new(969, 125, 33245)
+        elseif MyLevel <= 1500 then
+            Mon = "Ship Officer [Lv. 1325]"
+            QuestName = "ShipQuest2"
+            QuestLevel = 2
+            NameQuest = "Ship Officer"
+            CFrameMon = CFrame.new(1043, 130, 33300)
+            CFrameQuest = CFrame.new(969, 125, 33245)
+        elseif MyLevel <= 1525 then
+            Mon = "Arctic Warrior [Lv. 1350]"
+            QuestName = "FrostQuest"
+            QuestLevel = 1
+            NameQuest = "Arctic Warrior"
+            CFrameMon = CFrame.new(5667, 28, -6480)
+            CFrameQuest = CFrame.new(5669, 28, -6761)
+        elseif MyLevel <= 1575 then
+            Mon = "Snow Lurker [Lv. 1375]"
+            QuestName = "FrostQuest"
+            QuestLevel = 2
+            NameQuest = "Snow Lurker"
+            CFrameMon = CFrame.new(5234, 27, -6817)
+            CFrameQuest = CFrame.new(5669, 28, -6761)
+        elseif MyLevel <= 1600 then
+            Mon = "Sea Soldier [Lv. 1425]"
+            QuestName = "ForgottenQuest"
+            QuestLevel = 1
+            NameQuest = "Sea Soldier"
+            CFrameMon = CFrame.new(-3022, 16, -9720)
+            CFrameQuest = CFrame.new(-3054, 17, -9723)
+        elseif MyLevel <= 1750 then
+            Mon = "Water Fighter [Lv. 1450]"
+            QuestName = "ForgottenQuest"
+            QuestLevel = 2
+            NameQuest = "Water Fighter"
+            CFrameMon = CFrame.new(-3385, 20, -10542)
+            CFrameQuest = CFrame.new(-3054, 17, -9723)
+        end
+
+    elseif World3 then
+        -- Vou continuar com a lógica para o Terceiro Mundo em seguida.
+        -- Quer que eu continue agora ou você quer revisar essa parte primeiro?
+    end
+end
