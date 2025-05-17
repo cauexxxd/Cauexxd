@@ -1,18 +1,82 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
+local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))()
 
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+local Window = Rayfield:CreateWindow({
+   Name = "Cauezim Hub",
+   LoadingTitle = "Carregando Interface...",
+   LoadingSubtitle = "Script by Cauê",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "CauezimHub", -- Pode ser alterado se quiser
+      FileName = "Config"
+   },
+   Discord = {
+      Enabled = false
+   },
+   KeySystem = false
+})
 
-# Additional Ruby/bundler ignore for when you run: bundle install
-/vendor
+local MainTab = Window:CreateTab("Menu Principal", 4483362458) -- Ícone opcional
+local Section = MainTab:CreateSection("Recursos")
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem 
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
-Gemfile.lock
+-- Botão
+MainTab:CreateButton({
+   Name = "Botão de Teste",
+   Callback = function()
+      Rayfield:Notify({
+         Title = "Botão Clicado!",
+         Content = "Você apertou o botão com sucesso.",
+         Duration = 5,
+         Image = nil,
+         Actions = {
+            Ignore = {
+               Name = "Fechar",
+               Callback = function() end
+            }
+         }
+      })
+   end
+})
+
+-- Toggle
+MainTab:CreateToggle({
+   Name = "Ativar Modo X",
+   CurrentValue = false,
+   Flag = "ToggleModoX",
+   Callback = function(Value)
+      print("Modo X está", Value and "Ativado" or "Desativado")
+   end
+})
+
+-- Slider
+MainTab:CreateSlider({
+   Name = "Velocidade",
+   Range = {1, 100},
+   Increment = 1,
+   Suffix = "Vel",
+   CurrentValue = 10,
+   Flag = "SpeedSlider",
+   Callback = function(Value)
+      print("Velocidade:", Value)
+   end
+})
+
+-- Input de Texto
+MainTab:CreateInput({
+   Name = "Digite seu nome",
+   PlaceholderText = "Ex: Cauê",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+      print("Nome digitado:", Text)
+   end
+})
+
+-- Dropdown
+MainTab:CreateDropdown({
+   Name = "Escolha uma opção",
+   Options = {"Opção 1", "Opção 2", "Opção 3"},
+   CurrentOption = "Opção 1",
+   Flag = "DropdownTeste",
+   Callback = function(Option)
+      print("Selecionado:", Option)
+   end
+})
